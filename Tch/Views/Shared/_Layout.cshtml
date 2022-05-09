@@ -7,8 +7,6 @@
     <!-- Web Fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
 
-    @*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css"/>*@
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/asset/vendor/bootstrap/css/bootstrap.css" />
@@ -38,19 +36,10 @@
     <link href="~/asset/stylesheets/skins/default.css" rel="stylesheet" />
     <!-- Theme Custom CSS -->
     <link href="~/asset/stylesheets/theme-custom.css" rel="stylesheet" />
-    @*<link rel="styleshe
-        <link href="~/asset/vendor/jquery-ui/jquery-ui.css" rel="stylesheet" />et" href="~/vendor/select2/css/select2.css" />
-                <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-                <link rel="stylesheet" href="~/css/site.css" />
-                    <link href="~/lib/dropzone/basic.css" rel="stylesheet" />
-                <link href="~/lib/dropzone/dropzone.css" rel="stylesheet" />
-                <link href="~/css/bootstrap.css" rel="stylesheet" />
-                <link href="~/css/theme.css" rel="stylesheet" />*@
     <link href="~/lib/datatable/css/datatable.css" rel="stylesheet" />
     <link href="~/lib/datatable/css/datatable-bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    @*<section class="body">*@
     <header class="header">
         <div class="logo-container">
             <a href="../" class="logo">
@@ -63,9 +52,6 @@
 
         <!-- start: search & user box -->
         <div class="header-right">
-
-
-
             <div id="userbox" class="userbox">
                 <a href="#" data-toggle="dropdown">
                     <figure class="profile-picture">
@@ -143,10 +129,7 @@
                                 </a>
                                 <ul class="nav nav-children">
                                     <li class="nav-active">
-                                        @*<a href="Users_Companies.asp">
-                                                Companies
-                                            </a>*@
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Companies</a>
+                                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Companies</a>
                                     </li>
                                     <li style="display:none;">
                                         <a href="Users_Company_Details.asp">
@@ -154,9 +137,6 @@
                                         </a>
                                     </li>
                                     <li>
-                                        @*<a href="Users_Users.asp">
-                                                Users
-                                            </a>*@
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Users</a>
                                     </li>
                                     <li style="display:none;">
@@ -166,10 +146,6 @@
                                     </li>
                                 </ul>
                             </li>
-
-
-
-
                         </ul>
                     </nav>
                 </div>
@@ -206,7 +182,6 @@
 
                 </div>
             </header>
-            @*<div class="row">
                     <form id="form1" class="form-horizontal ">
                         <section class="panel panel-primary">
                             <header class="panel-heading">
@@ -237,9 +212,6 @@
                                         </select><span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 304.5px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                                     </div>
                                 </div>
-
-
-
                             </div>
                             <footer class="panel-footer" style="text-align: center">
                                 <button class="btn btn-primary">Search</button>
@@ -248,52 +220,10 @@
                         </section>
                     </form>
 
-                </div>*@
+                </div>
             @RenderBody()
         </section>
     </div>
-
-
-
-    @*</section>*@
-    <!--<header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">dotnet- Tch</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Users</a>
-                        </li>
-                        <li class="nav-item">
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Companies</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">-->
-    @* @RenderBody()*@
-    <!--</main>
-
-
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - TCH - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>-->
-
 
     <script src="~/lib/datatables.net-bs4/dataTables.bootstrap4.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -301,12 +231,6 @@
     <script src="~/lib/datatable/js/datatable.js"></script>
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    @*<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>*@
-
-
-
     <script src="~/lib/datatables.net/jquery.dataTables.js"></script>
     <script src=//cdn.datatables.net/1.11.2/js/dataTables.bootstrap.js></script>
     <script src=//cdn.datatables.net/1.11.2/js/dataTables.bootstrap.min.js></script>
@@ -393,7 +317,6 @@
         function selectedtext(ddlitem) {
 
             var selvalue = ddlitem.value;
-            //var selvalue = ddlitem.value;
             $('#txt').val(selvalue);
 
         };
@@ -405,21 +328,7 @@
             else
                 return false;
         }
-
-
-
-    </script>
-
-
-
-
-    @*<script src="~/lib/jquery/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="~/vendor/select2/js/select2.js"></script>
-        <script src="~/lib/dropzone/dropzone.js"></script>
-        <script src="~/lib/jquery/jquery.js"></script>
-        <span class="select2-container select2-container--bootstrap select2-container--open" style="position: absolute; top: 731px; left: 15px;"><span class="select2-dropdown select2-dropdown--above" dir="ltr" style="width: 478px;"><span class="select2-search select2-search--dropdown"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox"></span><span class="select2-results"><ul class="select2-results__options" role="tree" id="select2-useCompany-results" aria-expanded="true" aria-hidden="false"><li class="select2-results__option select2-results__option--highlighted" id="select2-useCompany-result-rto6-2" role="treeitem" aria-selected="true">Builders</li><li class="select2-results__option" id="select2-useCompany-result-zruq-1" role="treeitem" aria-selected="false">TCH abc</li></ul></span></span></span>*@
+    </script>    
     @RenderSection("Scripts", required: false)
 </body>
 </html>

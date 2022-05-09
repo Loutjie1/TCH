@@ -28,7 +28,6 @@
                             <option value="2">Builders</option>
 
                         </select>
-                        @*<span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr" style="width: 304.5px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 2.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>*@
                     </div>
                 </div>								<div class="form-group">
                     <label class="col-sm-3 control-label">Can Login: </label>
@@ -40,15 +39,8 @@
                             <option value="1">Yes</option>
 
                         </select>
-                        @*<span class="select2 select2-container select2-container--bootstrap select2-container--below select2-container--focus" dir="ltr" style="width: 304.5px;">
-                         < span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1">
-                            <ul class="select2-selection__rendered">
-                               <li class="select2-search select2-search--inline"><input class="select2-search__field" type="hidden" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>*@
-                    </div>
+                     </div>
                 </div>
-
-
-
             </div>
             <footer class="panel-footer" style="text-align: center">
                 <button class="btn btn-primary">Search</button>
@@ -58,12 +50,8 @@
     </form>
 </div>
     <div class="row">
-        @*<div class="panel-body">*@
-            @*<div class="col-md-auto">*@
-
                 <form asp-action="Users">
-                    @*<div class="row">*@
-                        <section class="panel panel-primary">
+                    <section class="panel panel-primary">
                             <header class="panel-heading">
                                 <h2 class="panel-title">Users</h2>
                                 <div style="padding:0px;padding-bottom: 10px; float: right; top:-25px; position: relative">
@@ -83,7 +71,6 @@
                                             <thead>
                                                 <tr role="row">
                                                     <th autowidth=t class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ID: activate to sort column descending" aria-sort="ascending" style="width: 13px;">ID</th>
-                                                    @*<th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="ID Name: activate to sort column ascending" style="width: 59px;">ID</th>*@
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Friendly Name: activate to sort column ascending" style="width: 59px;">Friendly Name</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Contact Number: activate to sort column ascending" style="width: 61px;">Contact Number</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Email Address: activate to sort column ascending" style="width: 149px;">Email Address</th>
@@ -98,23 +85,16 @@
                                 </div>
                             </div>
                         </section>
-
-                    @*</div>*@
-
-                </form>
-            @*</div>*@
-        @*</div>*@
+                    </form>
     </div>
     @section Scripts{
-
-        @*<script src="~/lib/customjs/PopulateCompanyTbl.js"></script>*@
         <script>
             $(document).ready(function () {
 
                 var table = $('#DataTable_Table_0').DataTable();
 
                 table.destroy();
-                //debugger;
+                
                 table = $("#DataTable_Table_0").DataTable({
                     "ajax": {
                         "url": "/Home/GetUsers",
@@ -127,7 +107,6 @@
                         { "data": "contact_Number", "name": "Contact_Number", "autoWidth": true },
                         { "data": "email_Address", "name": "Email_Address", "autoWidth": true },
                         { "data": "date_of_Birth", "name": "Date_of_Birth", "autoWidth": true },
-                        /*                    { "data": "age", "name": "Age", "autoWidth": true },*/
                         { "data": "company_name", "name": "Company_Name", "autoWidth": true },
                         { "data": "can_Login", "name": "Can_Login", "autoWidth": true },
                         {
@@ -137,9 +116,6 @@
                         }
                     ]
                 })
-
-
             });
-
         </script>
     }

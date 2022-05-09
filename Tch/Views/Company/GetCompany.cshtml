@@ -43,7 +43,6 @@
                             <div class="col-sm-6">
                                 <div style="padding-top:5px;">
                                     @Html.CheckBoxFor(m => m.Active, false)
-                                    @*<input @Html.CheckBox(m => m.Acti)>="Active" checked="checked" class="checkbox-slider yesno" type="checkbox" name="comActive" id="comActive">*@
                                     <span class="text"></span>
                                 </div>
                                 <input type="hidden" name="comActive_Other" id="comActive_Other" value="">
@@ -53,8 +52,6 @@
                     <footer class="panel-footer" style="text-align: center">
                         <button type="submit" class="btn btn-primary" onclick="{ window.location = 'Home/Privacy' ; }">Save</button>
                         <button type="reset" id="myButton" class="btn btn-default" >Cancel</button> 
-                        
-                        @*onclick="if(confirm('Changes will be lost, continue?')){window.URL='Home/Privacy' ;}"*@
                     </footer>
                 </section>
             </div>

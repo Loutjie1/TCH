@@ -20,13 +20,6 @@
 
   <ItemGroup>
     <None Remove="Controllers\UserController.csiiiiiii" />
-    <None Remove="Views\UpLoadImg\ImageUpload.cshtmldsdsf" />
-    <None Remove="Views\User\Index.cshtmlokjiji" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Views\UpLoadImg\ImageUpload.cshtmldsdsf" />
-    <Content Include="Views\User\Index.cshtmlokjiji" />
   </ItemGroup>
 
   <ItemGroup>
