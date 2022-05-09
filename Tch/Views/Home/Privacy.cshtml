@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<div class="row">
+    <form id="form1" class="form-horizontal ">
+        <section class="panel panel-primary">
+            <header class="panel-heading">
+                <div class="panel-actions">
+                    <a href="#" class="panel-action panel-action-toggle" data-panel-toggle=""></a>
+                </div>
+
+                <h2 class="panel-title">Filter Options: Companies</h2>
+
+            </header>
+            <div class="panel-body">
+
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Name: </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control focused" name="filt_comName" id="filt_comName" value="">
+                    </div>
+                </div>								<div class="form-group">
+                    <label class="col-sm-3 control-label">Active: </label>
+                    <div class="col-sm-6">
+                        <select name="filt_comActive" id="filt_comActive" multiple="" data-plugin-selecttwo="" class="form-control populate select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+
+                            <option value="2">No</option>
+
+                            <option value="1">Yes</option>
+
+                        </select>
+                        @*<span class="select2 select2-container select2-container--bootstrap select2-container--below" dir="ltr" style="width: 304.5px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>*@
+                    </div>
+                </div>
+
+
+
+            </div>
+            <footer class="panel-footer" style="text-align: center">
+                <button class="btn btn-primary">Search</button>
+                <button type="reset" class="btn btn-default">Reset</button>
+            </footer>
+        </section>
+    </form>
+
+</div>
+<div class="row">
+
+
+    @*<div class="col-md-auto">
+        @Url.Action("Export","ExportUser")"
+        <form asp-action="Company">*@
+    @*<div class="row">*@
+
+    <section class="panel panel-primary">
+        <header class="panel-heading">
+            <h2 class="panel-title">Companies</h2>
+            <div style="padding:0px;padding-bottom: 10px; float: right; top:-25px; position: relative">
+                <a class="btn-s btn btn-primary" href="@Url.Action("Index","Company")"><i class="fa fa-plus"></i> Add</a>
+                <a class="btn-s btn btn-primary" href="@Url.Action("Export","ExportComp")"><i class="fa fa-download"></i> Export</a>
+            </div>
+        </header>
+        <div class="panel-body">
+            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+                <div class="row datatables-header form-inline">
+                    <div id="DataTables_Table_0_processing" class="dataTables_processing" style="display: none;">
+                        <i class="fa fa-spinner fa-spin"></i> Loading
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped datatable-ajax dataTable no-footer" id="comDataTables" role="grid" aria-describedby="comDataTables_info">
+                        <thead>
+                            <tr role="row">
+                                <th width="140" class="sorting_asc" tabindex="0" aria-controls="comDataTables" rowspan="1" colspan="1" aria-label="ID: activate to sort column descending" aria-sort="ascending" style="width: 109px;">ID</th>
+                                @*<th class="sorting" tabindex="0" aria-controls="comDataTables" rowspan="1" colspan="1" aria-label="ID: activate to sort column descending" style="width: 86px;">Name</th>*@
+                                <th class="sorting" tabindex="0" aria-controls="comDataTables" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 86px;">Name</th>
+                                <th class="sorting" tabindex="0" aria-controls="comDataTables" rowspan="1" colspan="1" aria-label="Contact Number: activate to sort column ascending" style="width: 203px;">Contact Number</th>
+                                <th class="sorting" tabindex="0" aria-controls="comDataTables" rowspan="1" colspan="1" aria-label="Registration No: activate to sort column ascending" style="width: 192px;">Registration No</th>
+                                <th class="sorting" tabindex="0" aria-controls="comDataTables" rowspan="1" colspan="1" aria-label="Active: activate to sort column ascending" style="width: 89px;">Active</th>
+                                <th width="140" class="sorting" tabindex="0" aria-controls="comDataTables" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 109px;">Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    @*</div>*@
+    @*</form>
+        </div>*@
+
+</div>
+@section Scripts{
+
+    <script src="~/lib/customjs/PopulateCompanyTbl.js"></script>
+   
+}

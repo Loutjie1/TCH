@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+<html class="fixed dark header-dark js flexbox flexboxlegacy no-touch csstransforms csstransforms3d no-overflowscrolling no-mobile-device custom-scroll" style="" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TCH</title>
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+    @*<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css"/>*@
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/asset/vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/asset/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/asset/vendor/magnific-popup/css/magnific-popup.css" />
+    <link rel="stylesheet" href="~/asset/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+    <!-- Specific Page Vendor CSS -->
+    <link href="~/asset/vendor/select2/css/select2.css" rel="stylesheet" />
+    <link href="~/asset/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/asset/vendor/jquery-datatabels-bs3-assets/css/datatables.css" rel="stylesheet" />
+    <link href="~/asset/vendor/jquery-ui/jquery-ui.css" rel="stylesheet" />
+    <link href="~/asset/vendor/jquery-ui/jquery-ui.theme.css" rel="stylesheet" />
+    <link href="~/asset/vendor/bootstrap-multiselect/bootstrap-multiselect.css" rel="stylesheet" />
+    <link href="~/asset/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="~/asset/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet" />
+    <link href="~/asset/vendor/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" />
+    <link href="~/asset/vendor/dropzone/basic.css" rel="stylesheet" />
+    <link href="~/asset/vendor/dropzone/dropzone.css" rel="stylesheet" />
+    <link href="~/asset/vendor/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" />
+    <link href="~/asset/vendor/summernote/summernote.css" rel="stylesheet" />
+    <link href="~/asset/vendor/codemirror/lib/codemirror.css" rel="stylesheet" />
+    <link href="~/asset/vendor/codemirror/theme/monokai.css" rel="stylesheet" />
+    <!-- Theme CSS -->
+    <link href="~/asset/stylesheets/theme.css" rel="stylesheet" />
+    <link href="~/lib/datatables.net-bs4/dataTables.bootstrap4.css" rel="stylesheet" />
+    <!-- Skin CSS -->
+    <link href="~/asset/stylesheets/skins/default.css" rel="stylesheet" />
+    <!-- Theme Custom CSS -->
+    <link href="~/asset/stylesheets/theme-custom.css" rel="stylesheet" />
+    @*<link rel="styleshe
+        <link href="~/asset/vendor/jquery-ui/jquery-ui.css" rel="stylesheet" />et" href="~/vendor/select2/css/select2.css" />
+                <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+                <link rel="stylesheet" href="~/css/site.css" />
+                    <link href="~/lib/dropzone/basic.css" rel="stylesheet" />
+                <link href="~/lib/dropzone/dropzone.css" rel="stylesheet" />
+                <link href="~/css/bootstrap.css" rel="stylesheet" />
+                <link href="~/css/theme.css" rel="stylesheet" />*@
+    <link href="~/lib/datatable/css/datatable.css" rel="stylesheet" />
+    <link href="~/lib/datatable/css/datatable-bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    @*<section class="body">*@
+    <header class="header">
+        <div class="logo-container">
+            <a href="../" class="logo">
+                <img src="~/asset/assets/images/logo.png" height="35" alt="Porto Admin">
+            </a>
+            <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+                <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+            </div>
+        </div>
+
+        <!-- start: search & user box -->
+        <div class="header-right">
+
+
+
+            <div id="userbox" class="userbox">
+                <a href="#" data-toggle="dropdown">
+                    <figure class="profile-picture">
+                        <img src="~/asset/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="~/asset/images/!logged-user.jpg">
+                    </figure>
+                    <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
+                        <span class="name">John Doe Junior</span>
+                        <span class="role">administrator</span>
+                    </div>
+
+                    <i class="fa custom-caret"></i>
+                </a>
+
+                <div class="dropdown-menu">
+                    <ul class="list-unstyled">
+                        <li class="divider"></li>
+                        <li>
+                            <a role="menuitem" tabindex="-1" href="profile.asp"><i class="fa fa-user"></i> My Profile</a>
+                        </li>
+
+                        <li>
+                            <a role="menuitem" tabindex="-1" href="loginform.asp"><i class="fa fa-power-off"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end: search & user box -->
+    </header>
+    <div class="inner-wrapper">
+        <!-- start: sidebar -->
+        <aside id="sidebar-left" class="sidebar-left">
+            <div class="sidebar-header">
+                <div class="sidebar-title">
+                    Navigation
+                </div>
+                <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                    <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
+            </div>
+            <div class="nano has-scrollbar">
+                <div class="nano-content" tabindex="0" style="right: -17px;">
+                    <nav id="menu" class="nav-main" role="navigation">
+                        <ul class="nav nav-main">
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-parent ">
+                                <a>
+                                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                                    <span>Admin</span>
+                                </a>
+                                <ul class="nav nav-children">
+                                    <li>
+                                        <a href="Admin_Yes_No.asp">
+                                            Yes No
+                                        </a>
+                                    </li>
+                                    <li style="display:none;">
+                                        <a href="Admin_Yes_No_Details.asp">
+                                            Yes No Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent nav-expanded nav-active">
+                                <a>
+                                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                                    <span>Users</span>
+                                </a>
+                                <ul class="nav nav-children">
+                                    <li class="nav-active">
+                                        @*<a href="Users_Companies.asp">
+                                                Companies
+                                            </a>*@
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Companies</a>
+                                    </li>
+                                    <li style="display:none;">
+                                        <a href="Users_Company_Details.asp">
+                                            Company Details
+                                        </a>
+                                    </li>
+                                    <li>
+                                        @*<a href="Users_Users.asp">
+                                                Users
+                                            </a>*@
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Users</a>
+                                    </li>
+                                    <li style="display:none;">
+                                        <a href="Users_User_Details.asp">
+                                            User Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+
+
+                        </ul>
+                    </nav>
+                </div>
+                <script>
+                    // Maintain Scroll Position
+                    if (typeof localStorage !== 'undefined') {
+                        if (localStorage.getItem('sidebar-left-position') !== null) {
+                            var initialPosition = localStorage.getItem('sidebar-left-position'),
+                                sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+                            sidebarLeft.scrollTop = initialPosition;
+                        }
+                    }
+                </script>
+            </div>
+            <div class="nano-pane" style="opacity: 1; visibility: visible; display: none;">
+                <div class="nano-slider" style="height: 753px; transform: translate(0px, 0px);"></div>
+            </div>
+
+        </aside>
+        <section role="main" class="content-body">
+            <header class="page-header">
+                <h2>dotnet</h2>
+
+                <div class="right-wrapper pull-right" style="padding-right:10px;">
+                    <ol class="breadcrumbs">
+                        <li>
+                            <a href="loginform.asp">
+                                <i class="fa fa-home"></i>
+                            </a>
+                        </li>
+                        <li><span>dotnet</span></li>
+                    </ol>
+
+                </div>
+            </header>
+            @*<div class="row">
+                    <form id="form1" class="form-horizontal ">
+                        <section class="panel panel-primary">
+                            <header class="panel-heading">
+                                <div class="panel-actions">
+                                    <a href="#" class="panel-action panel-action-toggle" data-panel-toggle=""></a>
+                                </div>
+
+                                <h2 class="panel-title">Filter Options: Companies</h2>
+
+                            </header>
+                            <div class="panel-body">
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Name: </label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control focused" name="filt_comName" id="filt_comName" value="">
+                                    </div>
+                                </div>								<div class="form-group">
+                                    <label class="col-sm-3 control-label">Active: </label>
+                                    <div class="col-sm-6">
+                                        <select name="filt_comActive" id="filt_comActive" multiple="" data-plugin-selecttwo="" class="form-control populate select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+
+                                            <option value="2">No</option>
+
+                                            <option value="1">Yes</option>
+
+                                        </select><span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 304.5px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <footer class="panel-footer" style="text-align: center">
+                                <button class="btn btn-primary">Search</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </footer>
+                        </section>
+                    </form>
+
+                </div>*@
+            @RenderBody()
+        </section>
+    </div>
+
+
+
+    @*</section>*@
+    <!--<header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">dotnet- Tch</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Users</a>
+                        </li>
+                        <li class="nav-item">
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Companies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">-->
+    @* @RenderBody()*@
+    <!--</main>
+
+
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - TCH - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>-->
+
+
+    <script src="~/lib/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/lib/datatable/js/datatable.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    @*<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>*@
+
+
+
+    <script src="~/lib/datatables.net/jquery.dataTables.js"></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.bootstrap.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.bootstrap.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.bootstrap4.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.bootstrap4.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.bulma.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.bulma.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.dataTables.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.dataTables.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.foundation.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.foundation.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.jqueryui.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.jqueryui.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.legacy.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.legacy.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.material.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.material.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.semanticui.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.semanticui.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.uikit.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/dataTables.uikit.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/jquery.dataTables.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js></script>
+    <script src=//cdn.datatables.net/1.11.2/js/jquery.js></script>
+    @*Vendor*@
+    <script src="~/asset/vendor/jquery/jquery.js"></script>
+    <script src="~/asset/vendor/jquery.browser.mobile/jquery.browser.mobile.js"></script>
+    <script src="~/asset/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="~/asset/vendor/nanoscroller/nanoscroller.js"></script>
+    <script src="~/asset/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="~/asset/vendor/magnific-popup/js/jquery.magnific-popup.js"></script>
+    <script src="~/asset/vendor/jquery-placeholder/jquery-placeholder.js"></script>
+    <!-- Specific Page Vendor -->
+    <script src="~/asset/vendor/select2/js/select2.js"></script>
+    <script src="~/asset/vendor/jquery.datatables-media/jquery.dataTables.js"></script>
+    <script src="~/asset/vendor/jquery-datatabels-bs3-assets/js/datatables.js"></script>
+    <script src="~/asset/vendor/jquery-ui/jquery-ui.js"></script>
+    <script src="~/asset/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
+    <script src="~/asset/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+    <script src="~/asset/vendor/jquery.maskedinput/jquery.maskedinput.js"></script>
+    <script src="~/asset/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <script src="~/asset/vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script src="~/asset/vendor/bootstrap-timepicker/bootstrap-timepicker.js"></script>
+    <script src="~/asset/vendor/fueluxjs/spinner.js"></script>
+    <script src="~/asset/vendor/dropzone/dropzone.js"></script>
+    <script src="~/asset/vendor/bootstrap-markdown/js/markdown.js"></script>
+    <script src="~/asset/vendor/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+    <script src="~/asset/vendor/bootstrap-markdown/js/to-markdown.js"></script>
+    <script src="~/asset/vendor/codemirror/lib/codemirror.js"></script>
+    <script src="~/asset/vendor/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="~/asset/vendor/codemirror/addon/selection/active-line.js"></script>
+    <script src="~/asset/vendor/codemirror/mode/css/css.js"></script>
+    <script src="~/asset/vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="~/asset/vendor/codemirror/mode/javascript/javascript.js"></script>
+    <script src="~/asset/vendor/codemirror/mode/xml/xml.js"></script>
+    <script src="~/asset/vendor/summernote/summernote.js"></script>
+    <script src="~/asset/vendor/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+    <script src="~/asset/vendor/ios7-switch/ios7-switch.js"></script>
+    <script src="~/asset/vendor/bootstrap-confirmation/bootstrap-confirmation.js"></script>
+    <script src="~/asset/vendor/jquery-validate/jquery.validate.js"></script>
+    <!-- Theme Base, Components and Settings -->
+    <script src="~/asset/javascripts/theme.js"></script>
+    <!-- Theme Initialization Files -->
+    <script src="~/asset/javascripts/theme.init.js"></script>
+    <a class="scroll-to-top hidden-mobile" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- Examples -->
+    <script src="~/asset/javascripts/tables/examples.datatables.ajax.js"></script>
+    <script src="~/asset/javascripts/forms/examples.validation.js"></script>
+    <script src="~/asset/javascripts/forms/examples.advanced.form.js"></script>
+    @*<script src="~/js/site.js"></script>*@
+    <script>
+
+        function confirmit() {
+            var agree = confirm('Are you sure you wish to continue?');
+            if (agree)
+                return true;
+            else
+                return false;
+        };
+
+
+        function selectedtext(ddlitem) {
+
+            var selvalue = ddlitem.value;
+            //var selvalue = ddlitem.value;
+            $('#txt').val(selvalue);
+
+        };
+
+        function confirmit2() {
+            var agree = confirm('Are you sure you wish to continue?');
+            if (agree)
+                return true;
+            else
+                return false;
+        }
+
+
+
+    </script>
+
+
+
+
+    @*<script src="~/lib/jquery/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/vendor/select2/js/select2.js"></script>
+        <script src="~/lib/dropzone/dropzone.js"></script>
+        <script src="~/lib/jquery/jquery.js"></script>
+        <span class="select2-container select2-container--bootstrap select2-container--open" style="position: absolute; top: 731px; left: 15px;"><span class="select2-dropdown select2-dropdown--above" dir="ltr" style="width: 478px;"><span class="select2-search select2-search--dropdown"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox"></span><span class="select2-results"><ul class="select2-results__options" role="tree" id="select2-useCompany-results" aria-expanded="true" aria-hidden="false"><li class="select2-results__option select2-results__option--highlighted" id="select2-useCompany-result-rto6-2" role="treeitem" aria-selected="true">Builders</li><li class="select2-results__option" id="select2-useCompany-result-zruq-1" role="treeitem" aria-selected="false">TCH abc</li></ul></span></span></span>*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

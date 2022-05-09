@@ -1,0 +1,75 @@
+﻿@model Tch.Models.Company
+@{
+    ViewData["Title"] = "GetCompany";
+}
+<div class="row">
+    <div class="col-md-auto">
+        <form class="form-horizontal form-validation" asp-action="Company" name="form21401" id="form21401" method="post" novalidate="novalidate">
+            <input type="hidden" name="doupdate_Company_Details" id="doupdate_Company_Details" value="yes" alt="text">
+            <input type="hidden" name="comID_NewID" id="comID_NewID" value="" alt="text">
+            <div class="row">
+                <section class="panel panel-primary">
+                    <header class="panel-heading">
+                        <div class="panel-actions">
+                        </div>
+                        <h2 class="panel-title">Details</h2>
+                    </header>
+                    <div class="panel-body">
+                        <div class="form-group">
+                        <div class="col-sm-6">
+                                <input asp-for="Id" class="form-control focused" id="comId" required="" alt="text" aria-required="true" type="hidden">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Name: </label>
+                            <div class="col-sm-6">
+                                <input asp-for="Name" class="form-control focused" id="comName" required="" alt="text" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Contact Number: </label>
+                            <div class="col-sm-6">
+                                <input asp-for="Contact_Number" class="form-control focused" id="comContact_Number" alt="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Registration No: </label>
+                            <div class="col-sm-6">
+                                <input asp-for="Registration_No" class="form-control focused" id="comRegistration_No" alt="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Active: </label>
+                            <div class="col-sm-6">
+                                <div style="padding-top:5px;">
+                                    @Html.CheckBoxFor(m => m.Active, false)
+                                    @*<input @Html.CheckBox(m => m.Acti)>="Active" checked="checked" class="checkbox-slider yesno" type="checkbox" name="comActive" id="comActive">*@
+                                    <span class="text"></span>
+                                </div>
+                                <input type="hidden" name="comActive_Other" id="comActive_Other" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="panel-footer" style="text-align: center">
+                        <button type="submit" class="btn btn-primary" onclick="{ window.location = 'Home/Privacy' ; }">Save</button>
+                        <button type="reset" id="myButton" class="btn btn-default" >Cancel</button> 
+                        
+                        @*onclick="if(confirm('Changes will be lost, continue?')){window.URL='Home/Privacy' ;}"*@
+                    </footer>
+                </section>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script>
+    document.getElementById("myButton").onclick = function () {
+        if (confirm('Changes will be lost, continue?')) {
+            location.href = "www.google.com";
+        }
+    };
+</script>
+
+}

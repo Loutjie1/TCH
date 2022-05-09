@@ -1,0 +1,44 @@
+﻿@model Tch.Models.User
+@{
+    ViewData["Title"] = "ImageUpload";
+    Layout = "~/Views/Shared/_LayoutStd.cshtml";
+}
+
+<body bgcolor="#ffffff" onload="window.focus();">
+    <style>
+        body, td {
+            font-family: tahoma;
+            font-size: 11px;
+            padding: 3px;
+            margin: 0px;
+        }
+
+        table {
+            padding: 0px;
+            margin: 0px;
+            border-spacing: 0px;
+        }
+    </style>
+    <form asp-action="ImageUpload" method="POST" enctype="multipart/form-data" name="Upload2">
+        @*@Html.TextBoxFor(m => m.PictureFileName, Model.PictureFileName, new { @class = "form-control focused", @id = "Pic", @name = "formFile", @value =Model.PictureFileName, @type = "hidden", @alt = "text", oninput = "load()" })*@
+        <strong>File uploaded Succesfully </strong>
+        <input asp-for="PictureFileName" class="form-control focused" name="formFile" id="Pic" type="hidden" value=@Model.PictureFileName />
+        @*<input asp-for="PictureFile" class="form-control focused" name="formFile2" id="Picf" type="file" value=@Model.PictureFile/>*@
+        <p></p>
+        <p></p>
+        <p></p>
+        <button type="reset" onclick="load()">Close</button>
+    </form>
+ </body>
+
+
+    @section Scripts{
+        <script>
+            //"+" & Fname="+m.imgFname+" & name="+m.imgName"
+            function load() {
+                opener.document.form21401.usePic.value = document.Upload2.Pic.value
+                //window.location('/User/GetUPic?id=' + uid + '&Fname=' + Fname + '&name=' + name + '&sname=' + sname + '&cont=' + cont + '&email=' + email + '&dob=' + dob + '&age=' + age + '&Cname=' + Cname + '&Cid=' + Cid + '&Username=' + Username + '&Pass=' + Password + '&Pic' + Pic);
+                window.close();
+            }
+        </script>
+    }

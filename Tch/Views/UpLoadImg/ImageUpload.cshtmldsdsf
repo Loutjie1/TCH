@@ -1,0 +1,39 @@
+﻿@model Tch.Models.User
+@{
+    ViewData["Title"] = "ImageUpload";
+    Layout = "~/Views/Shared/_LayoutStd.cshtml";
+}
+
+<form asp-action="ImageUpload" method="POST" enctype="multipart/form-data" name="Upload2">
+    @*@Html.TextBoxFor(m => m.PictureFileName, Model.PictureFileName, new { @class = "form-control focused", @id = "Pic", @name = "formFile", @value =Model.PictureFileName, @type = "hidden", @alt = "text", oninput = "load()" })*@
+     
+    <input asp-for="PictureFileName" class="form-control focused" name="formFile" id="Pic" type="text" value=@Model.PictureFileName oninput = "load()"  />
+ </form>
+
+
+    @*@section Scripts{*@
+    <script>
+
+        var Pic = document.getElementById("Pic").value;
+        alert(Pic);
+        //"+" & Fname="+m.imgFname+" & name="+m.imgName"
+        function load() {
+            //var uid = document.getElementById("useId").value;
+            //var Fname = document.getElementById("useFriendly_Name").value;
+            //var name = document.getElementById("useName").value;
+            //var sname = document.getElementById("useSurname").value;
+            //var cont = document.getElementById("useContact_Number").value;
+            //var email = document.getElementById("useEmail_Address").value;
+            //var dob = document.getElementById("useDate_of_Birth").value;
+            //var age = document.getElementById("useAge").value;
+            //var Cname = document.getElementById("useCompany").value;
+            //var Cid = document.getElementById("txt").value;
+            //var Username = document.getElementById("useUsername").value;
+            //var Password = document.getElementById("usePassword").value;
+
+            opener.document.form21401.usePic.value = document.Upload2.Pic.value
+            //window.location('/User/GetUPic?id=' + uid + '&Fname=' + Fname + '&name=' + name + '&sname=' + sname + '&cont=' + cont + '&email=' + email + '&dob=' + dob + '&age=' + age + '&Cname=' + Cname + '&Cid=' + Cid + '&Username=' + Username + '&Pass=' + Password + '&Pic' + Pic);
+            //window.close();
+        }
+    </script>
+    @*}*@
